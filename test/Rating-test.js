@@ -1,9 +1,11 @@
 // Use expect BDD assertion style.
+import RatingSymbol from '../src/RatingSymbol';
+import Rating from '../src/Rating';
+
 var expect = require('chai').expect;
 var React = require('react');
 var TestUtils = require('react-dom/test-utils');
 var createRenderer = require('react-test-renderer/shallow').createRenderer;
-import Rating from '../src/Rating';
 var Style = require('../src/utils/style.js');
 
 var render = function (component) {
@@ -23,10 +25,9 @@ describe('Rating', function () {
     });
 
     it('should render a 5 symbol rating', function () {
-      var Symbol = require('../src/RatingSymbol');
       var children = rating.props.children;
       var symbols = children.filter(function (child) {
-        return TestUtils.isElementOfType(child, Symbol);
+        return TestUtils.isElementOfType(child, RatingSymbol);
       });
       expect(children).to.have.same.length(symbols.length).which.is.length(5);
     });
@@ -79,8 +80,7 @@ describe('Rating', function () {
     });
 
     it('should not have mouse leave handler', function () {
-      var noop = require('../src/utils/noop');
-      expect(rating.props.onMouseLeave).to.equal(noop);
+      expect(rating.props.onMouseLeave).to.equal(undefined);
     });
   });
 

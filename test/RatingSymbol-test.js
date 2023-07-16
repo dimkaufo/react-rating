@@ -26,11 +26,13 @@ describe('RatingSymbol', function () {
 
     it('should have inline styled background', function () {
       var backgroundNode = symbol.props.children[0];
+      console.log(backgroundNode)
       expect(backgroundNode.props.style).to.be.equal(background);
     });
 
     it('should have inline styled foreground', function () {
       var iconNode = symbol.props.children[1].props.children;
+      console.log(symbol.props.children[1])
       expect(iconNode.props.style).to.be.equal(icon);
     });
 
