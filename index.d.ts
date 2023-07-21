@@ -3,7 +3,6 @@
 // Definitions by:  Kyle Davis    <https://github.com/kyledavisdev>
 //                  Konrad Szwarc <https://github.com/szwarckonrad/>
 
-import { Dictionary } from "lodash";
 import * as React from "react";
 
 declare class Rating extends React.Component<RatingComponentProps> {}
@@ -101,7 +100,7 @@ export interface RatingComponentProps {
    *
    * Default value: Style.empty
    */
-  emptySymbol?: string | string[] | JSX.Element[] | JSX.Element;
+  emptySymbol?: React.ReactNode;
 
   /**
    * React element, inline style object, or classes applied to the rating
@@ -110,7 +109,7 @@ export interface RatingComponentProps {
    *
    * Default value: Style.full
    */
-  fullSymbol?: string | string[] | JSX.Element[] | JSX.Element;
+  fullSymbol?: React.ReactNode;
 
   /**
    * React element, inline style object, or classes applied to the
@@ -120,7 +119,7 @@ export interface RatingComponentProps {
    *
    * Default value: Style.placeholder
    */
-  placeholderSymbol?: string | string[] | JSX.Element[] | JSX.Element;
+  placeholderSymbol?: React.ReactNode;
 
   /**
    * Gets called with the value when a different value than the currently

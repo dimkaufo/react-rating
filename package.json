@@ -48,8 +48,6 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
     "@babel/standalone": "^7.0.0",
-    "@types/lodash": "^4.14.105",
-    "@types/react": "^18.2.15",
     "babel-eslint": "^9.0.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "bootstrap": "^3.3.5",
@@ -67,5 +65,8 @@
     "rollup": "^1.10.1",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-terser": "^4.0.4"
+  },
+  "dependencies": {
+    "@types/react": "^18.2.15"
   }
 }
